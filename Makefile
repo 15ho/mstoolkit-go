@@ -13,7 +13,7 @@ create:
 	@read -p "Enter module name: " moduleName; \
 		mkdir -p $(PROJECTDIR)/$$moduleName; \
 		cd $(PROJECTDIR)/$$moduleName; \
-		go mod init $(GOMODULEPREFIX)$$moduleName; \
+		go mod init $(GOMODULEPREFIX)/$$moduleName; \
 		cd $(PROJECTDIR); \
 		go work use ./$$moduleName
 
