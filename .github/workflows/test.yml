@@ -31,4 +31,4 @@ jobs:
           go-version: '1.24.x'
 
       - name: Test with the Go CLI
-        run: go work edit -json | jq -r '.Use[].DiskPath'  | xargs -I{} go test -v {}
+        run: make test
